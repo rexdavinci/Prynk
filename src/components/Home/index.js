@@ -1,8 +1,9 @@
+import { Fragment } from 'react'
 import { decrypt } from '../common-handlers'
 
 const Home = ({ user, prynkAddress }) => {
   return (
-    <>
+    <Fragment>
       <div> Send your deposits<b>{prynkAddress}</b></div>
       <div>
         <small>Your account is: <b>{user.account}</b> </small>
@@ -14,12 +15,16 @@ const Home = ({ user, prynkAddress }) => {
               <small>You are saving until: {decrypt(user.token).toDateString()}</small>
           </div> 
           : user && user.token && user.withdrawable <= 0 ? <div>
-            <small>Your withdrawable balance is <b>0</b> IGNIS</small>
+            
           </div> : null
           
         }       
+        { user.token && <small>Your withdrawable balance is <b>{user.withdrawable < 0 ? 0 : user.withdrawable / (10 ** 8)}</b> IGNIS</small> }
       </div>
-    </>
+      { /*{
+      //   user.token && <Transactions transactions={transactions} />
+      // */}
+    </Fragment>
   )
 }
 

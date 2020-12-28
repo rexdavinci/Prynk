@@ -5,7 +5,6 @@ export const networkCall = async (e, { callType, setUser, txs }) => {
     let userAccount = await fetch(`${process.env.REACT_APP_SERVER}requestType=${callType}&account=${account}`)
     userAccount = await userAccount.json()
 
-    // const { transactions } = await myDeposits.json()
     const accountDeposits = []
     const accountWithdrawals = []
 

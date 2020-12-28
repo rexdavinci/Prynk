@@ -25,15 +25,19 @@ const Prynk = () => {
       return false
     })
 
-    let text = `${result.day}/${result.month}/${result.year}`
+    let text = `${result.month}/${result.day}/${result.year}`
     text = new Date(text).getTime()
+    if(isNaN(text)) {
+      alert('Date is in wrong format')
+      return null
+    }
     const token = encrypt(`${user.account}:${text}`)
     setUser(prevState => ({ ...prevState, token }))
   }
 
   return (
     <div className="App">
-      <Home prynkAddress={process.env.REACT_APP_PRYNK_ADDRESS} user={user}/>
+      <Home prynkAddress={process.env.REACT_APP_PRYNK_ADDRESS} user={user} transactions={transactions}/>
       <div>
         {
           !user.account ? <Login setUser={setUser} prynkerTxs={transactions}/> : null
