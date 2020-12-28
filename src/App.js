@@ -37,6 +37,8 @@ const Prynk = () => {
 
   return (
     <div className="App">
+      <h3 style={{ color: 'red' }}>Use only testnet IGNIS</h3>
+      <div style={{ padding: '1rem' }}> <em><b>contribute: </b><a rel='noreferrer'  target='_blank' href='https://github.com/rexdavinci/Prynk_ARDOR'>prynk</a></em></div>
       <Home prynkAddress={process.env.REACT_APP_PRYNK_ADDRESS} user={user} transactions={transactions}/>
       <div>
         {
