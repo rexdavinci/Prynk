@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project works with nodejs v12.18.3. You need to have ardor server running locally to test this app
+This project works with nodejs v12.18.3.
 
 Clone this repo
 
