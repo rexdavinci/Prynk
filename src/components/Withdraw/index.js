@@ -20,9 +20,7 @@ const WithdrawFunds = ({ user, chain }) => {
       console.log(chain.tokenAddress)
       try{
       const withdraw = await chain.prynkContract.withdraw(chain.tokenAddress)
-      const tx = await withdraw.wait()
-
-        // console.log(tx)
+        await withdraw.wait()
       } catch(e) {
         console.log(e.message)
       }

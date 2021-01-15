@@ -36,7 +36,7 @@ const Ethereum = ({ goerli }) => {
           setERC20Contract(erc20I)
         }
       }
-    }, [token])
+    }, [token]) // eslint-disable-line react-hooks/exhaustive-deps
     
 
     const prynkIt = async(e) => {
