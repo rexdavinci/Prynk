@@ -2,8 +2,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import './App.css';
 import { Home, Ethereum, Login, Logout, WithdrawFunds, encrypt } from './components'
-import { ABI, ERC20ABI } from './utils'
-
 
 const Prynk = () => {
   const [user, setUser] = useState({})
