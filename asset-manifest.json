@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Prynk/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/Prynk/static/js/main.6464e30b.chunk.js",
+    "main.js.map": "/Prynk/static/js/main.6464e30b.chunk.js.map",
+    "runtime-main.js": "/Prynk/static/js/runtime-main.e8b750d5.js",
+    "runtime-main.js.map": "/Prynk/static/js/runtime-main.e8b750d5.js.map",
+    "static/js/2.112bd35b.chunk.js": "/Prynk/static/js/2.112bd35b.chunk.js",
+    "static/js/2.112bd35b.chunk.js.map": "/Prynk/static/js/2.112bd35b.chunk.js.map",
+    "static/js/3.916eacc3.chunk.js": "/Prynk/static/js/3.916eacc3.chunk.js",
+    "static/js/3.916eacc3.chunk.js.map": "/Prynk/static/js/3.916eacc3.chunk.js.map",
+    "index.html": "/Prynk/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/Prynk/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.112bd35b.chunk.js.LICENSE.txt": "/Prynk/static/js/2.112bd35b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8b750d5.js",
+    "static/js/2.112bd35b.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.6464e30b.chunk.js"
+  ]
+}
