@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.2.2",
     "axios": "^0.21.0",
     "crypto-js": "^4.0.0",
+    "ethers": "^5.0.26",
     "fs": "0.0.1-security",
     "fs-extra": "^9.0.1",
     "react": "^17.0.1",

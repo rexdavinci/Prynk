@@ -64,8 +64,6 @@ export const networkCall = async (e, { callType, setUser, txs }) => {
       const fee = totalDeposits * 0.01 // 1% of deposits
       withdrawable = totalDeposits - totalWithdrawals - fee
     }
-
-
     setUser({ token, myTxs, accountCreatedBlock, account: userAccount.accountRS, totalDeposits, totalWithdrawals, withdrawable })
   }
 }
