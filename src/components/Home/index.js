@@ -1,8 +1,8 @@
 import { Fragment } from 'react'
 import { decrypt } from '../common-handlers'
 
-const Home = ({ user, prynkAddress }) => {
-  return (
+const Home = ({ user, prynkAddress, ethAddress, blockchain }) => {
+  return blockchain === 'tArdor' ? (
     <Fragment>
       <div> Send your deposits<b>{prynkAddress}</b></div>
       <div>
@@ -21,9 +21,11 @@ const Home = ({ user, prynkAddress }) => {
         }       
         { user.token && <small>Your withdrawable balance is <b>{user.withdrawable < 0 ? 0 : user.withdrawable / (10 ** 8)}</b> IGNIS</small> }
       </div>
-      { /*{
-      //   user.token && <Transactions transactions={transactions} />
-      // */}
+    </Fragment>
+  ) : (
+    <Fragment>
+      <div>PRYNK's contract address: <b>{ethAddress}</b></div>
+      <small>Get free tokens: <a rel='noreferrer' target='_blank' href='https://rexdavinci.github.io/erc20-faucet-client'>faucet</a></small>
     </Fragment>
   )
 }

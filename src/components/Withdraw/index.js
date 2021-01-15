@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { decrypt } from '../common-handlers'
 
-const WithdrawFunds = ({ user }) => {  
+const WithdrawFunds = ({ user, chain }) => {  
 
   const withdraw = async({ fee }) => {
     try {
@@ -15,25 +15,52 @@ const WithdrawFunds = ({ user }) => {
   }
 
   const handleWithdraw = async () => {
-    const dueDate = decrypt(user.token)
-    const now = Date.now()
-    const fee = 0.025 * 10 ** 8
-    if(dueDate < now && user.withdrawable > 0){
-      if (user.withdrawable < fee) {
-        alert('Your balance is lower than the fee')
-        return null
+    if(chain.name === 'goerli') {
+
+      console.log(chain.tokenAddress)
+      try{
+      const withdraw = await chain.prynkContract.withdraw(chain.tokenAddress)
+        await withdraw.wait()
+      } catch(e) {
+        console.log(e.message)
       }
-      await withdraw({ fee })
-    } else {
-      alert(`Your withdrawal target date is ${new Date(dueDate).toDateString()}. You can do it, just a little more patience`)
+    }
+
+    if(chain.name === 'tArdor') {
+      const dueDate = decrypt(user.token)
+      const now = Date.now()
+      const fee = 0.025 * 10 ** 8
+      if(dueDate < now && user.withdrawable > 0){
+        if (user.withdrawable < fee) {
+          alert('Your balance is lower than the fee')
+          return null
+        }
+        await withdraw({ fee })
+      } else {
+        alert(`Your withdrawal target date is ${new Date(dueDate).toDateString()}. You can do it, just a little more patience`)
+      }
     }
   }
+
+  if(chain.name === 'goerli') {
+
+    return <div>
+      <p>Withdraw My Funds</p>
+      <button onClick={handleWithdraw}>Withdraw</button>
+    </div>
+  }
+
+  if(chain.name === 'tArdor') {
   return user.withdrawable > 0 && (
     <div>
       <p>Withdraw My Funds</p>
       <button onClick={handleWithdraw}>Withdraw</button>
     </div>
-  )
+
+    )
+  }
+
+  return null
 }
 
 export default WithdrawFunds
