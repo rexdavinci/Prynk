@@ -138,6 +138,9 @@ const Ethereum = ({ goerli }) => {
 
   const connectProvider = ({ setAddress }) => {
     const { ethereum } = window
+    if(!ethereum) {
+      alert('You need to install metamask or similar tools')
+    }
     const provider = new ethers.providers.Web3Provider(ethereum)
     ethereum.request({ method: 'eth_requestAccounts'}).then(acc => setAddress(acc[0]))
     return provider;
