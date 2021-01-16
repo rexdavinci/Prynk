@@ -24,8 +24,8 @@ const Home = ({ user, prynkAddress, ethAddress, blockchain }) => {
     </Fragment>
   ) : (
     <Fragment>
-      <div>PRYNK's contract address: <b>{ethAddress}</b></div>
-      <small>Get free tokens: <a rel='noreferrer' target='_blank' href='https://rexdavinci.github.io/erc20-faucet-client'>faucet</a></small>
+      <div>PRYNK's contract address: <small><a rel='noreferrer' target='_blank' href={`https://goerli.etherscan.io/address/${ethAddress}`}><b>{ethAddress}</b></a></small></div>
+      <small>Get free tokens: <a rel='noreferrer' target='_blank' href='https://rexdavinci.github.io/erc20-faucet-client'><b>faucet</b></a></small>
     </Fragment>
   )
 }
