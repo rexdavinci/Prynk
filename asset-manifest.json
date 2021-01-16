@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Prynk/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/Prynk/static/js/main.6464e30b.chunk.js",
-    "main.js.map": "/Prynk/static/js/main.6464e30b.chunk.js.map",
+    "main.js": "/Prynk/static/js/main.2a212869.chunk.js",
+    "main.js.map": "/Prynk/static/js/main.2a212869.chunk.js.map",
     "runtime-main.js": "/Prynk/static/js/runtime-main.e8b750d5.js",
     "runtime-main.js.map": "/Prynk/static/js/runtime-main.e8b750d5.js.map",
     "static/js/2.112bd35b.chunk.js": "/Prynk/static/js/2.112bd35b.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e8b750d5.js",
     "static/js/2.112bd35b.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.6464e30b.chunk.js"
+    "static/js/main.2a212869.chunk.js"
   ]
 }
